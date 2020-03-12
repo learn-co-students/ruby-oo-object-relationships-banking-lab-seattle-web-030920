@@ -22,12 +22,15 @@ class Transfer
     end
   end
 
+  # def unique?
+  #   if @@all.find {|trans| trans == self} == nil
+  #     true
+  #   else
+  #     false
+  #   end
+  # end
   def unique?
-    if @@all.find {|trans| trans == self} == nil
-      true
-    else
-      false
-    end
+    @@all.find {|trans| trans == self} == nil ? true : false
   end
 
   def execute_transaction
